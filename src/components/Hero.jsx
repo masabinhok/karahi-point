@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
 import Navbar from "./Navbar";
+import { karahiLogo } from "../assets/index";
 
 const Hero = () => {
   return (
@@ -39,7 +39,7 @@ const Hero = () => {
         </div>
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <img
-            src="../public/karahiLogo.png"
+            src={karahiLogo}
             alt="Construction"
             className="w-full max-w-md rounded-lg shadow-lg"
           />
