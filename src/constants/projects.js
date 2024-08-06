@@ -1,15 +1,19 @@
-import { project2, project1 } from "../assets";
+import { hamilton, toronto } from "../assets";
 
 const projects = [
   {
     title: "Project Toronto",
     description: "Work in progress",
-    image: project1,
+    image: toronto,
+    totalCost: 100000,
+    amountDue: 50000,
   },
   {
     title: "Project Hamilton",
     description: "Work in progress",
-    image: project2,
+    image: hamilton,
+    totalCost: 100000,
+    amountDue: 50000,
   },
 ];
 

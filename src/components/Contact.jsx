@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section className="w-full flex flex-col items-center justify-center p-10 bg-gradient-to-r from-red-400 to-pink-400 text-white">
+    <section className="w-full flex flex-col items-center justify-center p-10 bg-gradient-to-r from-green-400 to-green-800 text-white">
       <div className="mb-8">
         <h1 className="text-4xl md:text-5xl font-bold tracking-wide">
           Contact Us

@@ -1,6 +1,6 @@
 import karahiLogo from "./karahiLogo.png";
 
-import project1 from "./project1.png";
-import project2 from "./project2.png";
+import hamilton from "./hamilton.webp";
+import toronto from "./toronto.jpg";
 
-export { karahiLogo, project1, project2 };
+export { karahiLogo, hamilton, toronto };

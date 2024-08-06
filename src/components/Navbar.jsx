@@ -4,7 +4,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex justify-center max-w-[1320px] w-full bg-gradient-to-r from-pink-400 to-red-400 text-white rounded-xl shadow-lg">
+    <nav className="flex fixed top-4 max-md:top-0 max-md:rounded-none  z-10 justify-center max-w-[1320px] w-full bg-gradient-to-r from-green-800 to-green-400 text-white rounded-xl shadow-lg">
       <div className="max-w-[1320px]  w-full flex items-center justify-between p-6 ">
         <div className="flex items-start flex-col">
           <h1 className="text-2xl font-bold">Karahi Point </h1>
@@ -60,7 +60,7 @@ const Navbar = () => {
           </button>
         </div>
         {isOpen && (
-          <div className="md:hidden absolute top-16 left-0 w-full bg-gradient-to-r from-pink-400 to-red-400 rounded-xl shadow-lg">
+          <div className="md:hidden absolute top-16 left-0 w-full bg-gradient-to-r from-green-800 to-green-400 rounded-xl shadow-lg">
             <ul className="flex flex-col items-center space-y-4 p-4">
               <li>
                 <a href="#" className="hover:text-gray-300">
