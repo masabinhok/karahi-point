@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Navelem from "./Navelem";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,32 +12,16 @@ const Navbar = () => {
           <h1 className="text-2xl font-bold">Karahi Point </h1>
         </div>
         <div className="hidden md:flex space-x-4">
-          <ul className="flex space-x-4">
-            <li>
-              <a href="#" className="hover:text-gray-300">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-300">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-300">
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-300">
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-300">
-                Contact
-              </a>
-            </li>
+          <ul className="flex space-x-10">
+            <Link to="/">
+              <Navelem tag="Home" />
+            </Link>
+            <Link to="/project">
+              <Navelem tag="Projects" />
+            </Link>
+            <Link to="/contact">
+              <Navelem tag="Contact" />
+            </Link>
           </ul>
         </div>
         <div className="md:hidden flex items-center">
@@ -62,31 +48,15 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden absolute top-16 left-0 w-full bg-gradient-to-r from-green-800 to-green-400 rounded-xl shadow-lg">
             <ul className="flex flex-col items-center space-y-4 p-4">
-              <li>
-                <a href="#" className="hover:text-gray-300">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-300">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-300">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-300">
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-300">
-                  Contact
-                </a>
-              </li>
+              <Link to="/">
+                <Navelem tag="Home" />
+              </Link>
+              <Link to="/project">
+                <Navelem tag="Projects" />
+              </Link>
+              <Link to="/contact">
+                <Navelem tag="Contact" />
+              </Link>
             </ul>
           </div>
         )}
