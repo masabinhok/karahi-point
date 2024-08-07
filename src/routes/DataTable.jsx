@@ -33,7 +33,7 @@ const DataTable = () => {
                   <td className="py-2">{item.date}</td>
                   <td className="py-2">{item.cost}</td>
                   <td className="py-2">{item.paid}</td>
-                  <td className="py-2">{item.due}</td>
+                  <td className="py-2">{item.cost - item.paid}</td>
                   <td className="py-2">{item.description}</td>
                 </tr>
               ))}
@@ -43,21 +43,25 @@ const DataTable = () => {
                 <td className="py-2">
                   {" "}
                   {categoryData.details.reduce(
-                    (acc, item) => acc + parseInt(item.cost),
+                    (acc, item) => acc + parseFloat(item.cost),
                     0
                   )}
                 </td>
                 <td className="py-2">
                   {categoryData.details.reduce(
-                    (acc, item) => acc + parseInt(item.paid),
+                    (acc, item) => acc + parseFloat(item.paid),
                     0
                   )}
                 </td>
                 <td className="py-2">
                   {categoryData.details.reduce(
-                    (acc, item) => acc + parseInt(item.due),
+                    (acc, item) => acc + parseFloat(item.cost),
                     0
-                  )}
+                  ) -
+                    categoryData.details.reduce(
+                      (acc, item) => acc + parseFloat(item.paid),
+                      0
+                    )}
                 </td>
                 <td className="py-2">-</td>
               </tr>

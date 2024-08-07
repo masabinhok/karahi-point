@@ -26,7 +26,7 @@ const Select = () => {
         <option value="Cooler/Freezer">Cooler/Freezer</option>
         <option value="Plumber">Plumber</option>
         <option value="Electrician">Electrician</option>
-        <option value="Framing/tbar">Framing/tbar</option>
+        <option value="Framing-tbar">Framing-tbar</option>
         <option value="Furniture">Furniture</option>
         <option value="Miscellaneous">Miscellaneous</option>
         <option value="IT">IT</option>
