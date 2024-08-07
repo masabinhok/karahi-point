@@ -19,7 +19,7 @@ const Select = () => {
         defaultValue=""
       >
         <option value="" disabled>
-          Category
+          Click here for more details
         </option>
         <option value="TJ-HOODS">TJ-HOODS</option>
         <option value="TJ-HVAC">TJ-HVAC</option>

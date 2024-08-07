@@ -1,5 +1,6 @@
 import projects from "../constants/projects";
 import Select from "./Select";
+import { totalCost, totalDue } from "../constants/calculator";
 
 const ProjectCard = () => {
   return (
@@ -26,12 +27,10 @@ const ProjectCard = () => {
           </div>
           <div className="w-full p-4 flex flex-col items-center">
             <p className="text-lg font-bold">
-              Total Cost:{" "}
-              <span className="text-yellow-400">${project.totalCost}</span>
+              Total Cost: <span className="text-yellow-400">${totalCost}</span>
             </p>{" "}
             <p className="text-lg font-bold">
-              Amount Due:{" "}
-              <span className="text-yellow-400">${project.amountDue}</span>
+              Amount Due: <span className="text-yellow-400">${totalDue}</span>
             </p>
             <Select />
           </div>
