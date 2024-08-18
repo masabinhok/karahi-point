@@ -31,3 +31,7 @@
 .custom-scrollbar::-webkit-scrollbar-track {
   background: transparent; /* Background of the track */
 }
+
+body {
+  background: linear-gradient(to right, #48bb78, #2f855a);
+}

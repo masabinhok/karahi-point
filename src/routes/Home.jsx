@@ -1,5 +1,6 @@
 import Contact from "../components/Contact";
 import Hero from "../components/Hero";
+import MonthlyRecords from "../components/MonthlyRecords";
 import Projects from "../components/Projects";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <>
       <Hero />
       <Projects />
+      <MonthlyRecords />
       <Contact />
     </>
   );
