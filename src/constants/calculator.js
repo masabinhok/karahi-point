@@ -1,4 +1,4 @@
-import category from "../constants/category";
+import category from "./torontoData";
 
 function calculateTotalCost(data) {
   let totalCost = 0;

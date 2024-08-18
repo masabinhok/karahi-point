@@ -8,3 +8,26 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+/* Custom Scrollbar Styles */
+.custom-scrollbar {
+  padding-right: 10px; /* Space for scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Thin scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3); /* Light gray background */
+  border-radius: 8px; /* Slightly rounded corners */
+  transition: background 0.3s; /* Smooth transition */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5); /* Darker gray on hover */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Background of the track */
+}

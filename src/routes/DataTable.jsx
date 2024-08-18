@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import data from "../constants/category";
+import data from "../constants/torontoData";
 import Navbar from "../components/Navbar";
 import Contact from "../components/Contact";
 

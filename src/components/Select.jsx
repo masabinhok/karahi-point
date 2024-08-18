@@ -1,8 +1,18 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import toronto from "../constants/torontoData";
+import hamilton from "../constants/hamiltonData";
 
-const Select = () => {
+const Select = ({ selectKey }) => {
   const navigate = useNavigate();
+
+  // Determine the data source based on selectKey
+  let data = [];
+  if (selectKey === "toronto") {
+    data = toronto;
+  } else if (selectKey === "hamilton") {
+    data = hamilton;
+  }
 
   const handleSelect = (event) => {
     const selectedCategory = event.target.value;
@@ -21,23 +31,11 @@ const Select = () => {
         <option value="" disabled>
           Click here for more details
         </option>
-        <option value="TJ-HOODS">TJ-HOODS</option>
-        <option value="TJ-HVAC">TJ-HVAC</option>
-        <option value="Cooler/Freezer">Cooler/Freezer</option>
-        <option value="Plumber">Plumber</option>
-        <option value="Electrician">Electrician</option>
-        <option value="Framing-tbar">Framing-tbar</option>
-        <option value="Furniture">Furniture</option>
-        <option value="Miscellaneous">Miscellaneous</option>
-        <option value="IT">IT</option>
-        <option value="Flooring">Flooring</option>
-        <option value="Painting">Painting</option>
-        <option value="Sign Guy">Sign Guy</option>
-        <option value="Labour">Labour</option>
-        <option value="Decor">Decor</option>
-        <option value="Appliances">Appliances</option>
-        <option value="Bathroom">Bathroom</option>
-        <option value="Gas/Hotel/Food">Gas/Hotel/Food</option>
+        {data.map((entry) => (
+          <option key={entry.category} value={entry.category}>
+            {entry.category}
+          </option>
+        ))}
       </select>
       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
         <svg className="fill-current h-4 w-4" viewBox="0 0 20 20">
