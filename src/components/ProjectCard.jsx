@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import projects from "../constants/projects";
 import Select from "./Select";
-import { totalCost, totalDue } from "../constants/calculator";
 
 const ProjectCard = () => {
   const scrollContainerRef = useRef(null);
@@ -48,10 +47,11 @@ const ProjectCard = () => {
             <div className="w-full p-4 flex flex-col items-center">
               <p className="text-sm font-bold">
                 Total Cost:{" "}
-                <span className="text-yellow-400">${totalCost}</span>
+                <span className="text-yellow-400">${project.totalCost}</span>
               </p>
               <p className="text-sm font-bold">
-                Amount Due: <span className="text-yellow-400">${totalDue}</span>
+                Amount Due:{" "}
+                <span className="text-yellow-400">${project.amountDue}</span>
               </p>
               <Select selectKey={project.selectKey} />
             </div>

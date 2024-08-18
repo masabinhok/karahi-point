@@ -1,11 +1,15 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import data from "../constants/torontoData";
+import toronto from "../constants/torontoData";
+import hamilton from "../constants/hamiltonData";
+
 import Navbar from "../components/Navbar";
 import Contact from "../components/Contact";
 
 const DataTable = () => {
   const { category } = useParams();
+
+  const data = [...toronto, ...hamilton];
 
   const categoryData = data.find((item) => item.category === category);
 

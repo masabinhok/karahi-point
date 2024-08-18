@@ -1,6 +1,6 @@
-const data = [
+const hamilton = [
   {
-    category: "TJ-HOODS",
+    category: "H:TJ-HOODS",
     details: [
       {
         item: "TJ- HOODS",
@@ -33,7 +33,7 @@ const data = [
     ],
   },
   {
-    category: "TJ-HVAC",
+    category: "H:TJ-HVAC",
     details: [
       {
         item: "TJ-HVAC",
@@ -66,10 +66,10 @@ const data = [
     ],
   },
   {
-    category: "COOLER/FREEZER",
+    category: "H:COOLER-FREEZER",
     details: [
       {
-        item: "COOLER/FREEZER",
+        item: "COOLER-FREEZER",
         date: "",
         cost: 30510,
         paid: 0,
@@ -99,7 +99,7 @@ const data = [
     ],
   },
   {
-    category: "Plumber",
+    category: "H:Plumber",
     details: [
       {
         item: "Plumber",
@@ -146,7 +146,7 @@ const data = [
     ],
   },
   {
-    category: "Electrician",
+    category: "H:Electrician",
     details: [
       {
         item: "Electrician",
@@ -194,7 +194,7 @@ const data = [
   },
 
   {
-    category: "Framing",
+    category: "H:Framing",
     details: [
       {
         item: "Framing",
@@ -241,7 +241,7 @@ const data = [
     ],
   },
   {
-    category: "Storage on top",
+    category: "H:Storage on top",
     details: [
       {
         item: "Storage on top",
@@ -394,7 +394,7 @@ const data = [
     ],
   },
   {
-    category: "Furniture",
+    category: "H:Furniture",
     details: [
       {
         item: "Furniture",
@@ -470,7 +470,7 @@ const data = [
     ],
   },
   {
-    category: "Painting",
+    category: "H:Painting",
     details: [
       {
         item: "Painting",
@@ -511,7 +511,7 @@ const data = [
     ],
   },
   {
-    category: "IT",
+    category: "H:IT",
     details: [
       {
         item: "IT",
@@ -537,7 +537,7 @@ const data = [
     ],
   },
   {
-    category: "Flooring",
+    category: "H:Flooring",
     details: [
       {
         item: "Flooring",
@@ -613,7 +613,7 @@ const data = [
     ],
   },
   {
-    category: "Sign Guy",
+    category: "H:Sign Guy",
     details: [
       {
         item: "",
@@ -639,7 +639,7 @@ const data = [
     ],
   },
   {
-    category: "LABOUR",
+    category: "H:LABOUR",
     details: [
       {
         item: "sudesh wife labor cost",
@@ -665,7 +665,7 @@ const data = [
     ],
   },
   {
-    category: "Decor",
+    category: "H:Decor",
     details: [
       {
         item: "",
@@ -699,7 +699,7 @@ const data = [
     ],
   },
   {
-    category: "Appliances",
+    category: "H:Appliances",
     details: [
       {
         item: "",
@@ -711,7 +711,7 @@ const data = [
     ],
   },
   {
-    category: "MISCELLANEOUS",
+    category: "H:MISCELLANEOUS",
     details: [
       {
         item: "ulline industrial pallet truck",
@@ -793,7 +793,7 @@ const data = [
     ],
   },
   {
-    category: "gas/hotel/food",
+    category: "H:gas-hotel-food",
     details: [
       {
         item: "gas",
@@ -895,4 +895,4 @@ const data = [
   },
 ];
 
-export default data;
+export default hamilton;

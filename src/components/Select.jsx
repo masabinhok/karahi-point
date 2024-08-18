@@ -8,9 +8,10 @@ const Select = ({ selectKey }) => {
 
   // Determine the data source based on selectKey
   let data = [];
-  if (selectKey === "toronto") {
+  if (selectKey === 1) {
     data = toronto;
-  } else if (selectKey === "hamilton") {
+  }
+  if (selectKey === 2) {
     data = hamilton;
   }
 

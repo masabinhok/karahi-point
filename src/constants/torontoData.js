@@ -1,6 +1,6 @@
-const data = [
+const toronto = [
   {
-    category: "TJ-HOODS",
+    category: "T:TJ-HOODS",
     details: [
       {
         item: "Item 1",
@@ -41,7 +41,7 @@ const data = [
     ],
   },
   {
-    category: "TJ-HVAC",
+    category: "T:TJ-HVAC",
     details: [
       {
         item: "Item A",
@@ -53,9 +53,8 @@ const data = [
       // Add more items as needed
     ],
   },
-
   {
-    category: "Decorations",
+    category: "T:Decorations",
     details: [
       {
         item: "amazon",
@@ -88,9 +87,8 @@ const data = [
       // Add more items as needed
     ],
   },
-
   {
-    category: "Electrician",
+    category: "T:Electrician",
     details: [
       {
         item: "Electrical",
@@ -137,7 +135,7 @@ const data = [
     ],
   },
   {
-    category: "Flooring",
+    category: "T:Flooring",
     details: [
       {
         item: "Vinyl Flooring",
@@ -162,9 +160,8 @@ const data = [
       },
     ],
   },
-
   {
-    category: "Framing-tbar",
+    category: "T:Framing-tbar",
     details: [
       {
         item: "Labour Cost",
@@ -201,7 +198,6 @@ const data = [
         paid: 2200,
         description: "Wall framing", // Empty description
       },
-
       {
         item: "Framing material cost",
         date: "June 7",
@@ -260,9 +256,8 @@ const data = [
       },
     ],
   },
-
   {
-    category: "Furniture",
+    category: "T:Furniture",
     details: [
       {
         item: "Table and cash",
@@ -271,7 +266,6 @@ const data = [
         paid: 2000,
         description: "", // Empty description
       },
-
       {
         item: "Cash Register",
         date: "June 13",
@@ -279,7 +273,6 @@ const data = [
         paid: 0,
         description: "First deposit", // Empty description
       },
-
       {
         item: "Chair",
         date: "June 17",
@@ -297,7 +290,7 @@ const data = [
     ],
   },
   {
-    category: "IT",
+    category: "T:IT",
     details: [
       {
         item: "Benlya Services",
@@ -323,7 +316,7 @@ const data = [
     ],
   },
   {
-    category: "Miscellaneous",
+    category: "T:Miscellaneous",
     details: [
       {
         item: "Home depot",
@@ -347,82 +340,28 @@ const data = [
         description: "",
       },
       {
-        item: "Glass break",
-        date: "June 13",
-        cost: 565,
-        paid: 565,
+        item: "Benlya Services",
+        date: "June 12",
+        cost: 629.61,
+        paid: 629.61,
         description: "",
       },
       {
-        item: "Material cost",
-        date: "June 20",
-        cost: 9.02,
-        paid: 9.02,
-        description: "ikea",
+        item: "Benlya Services",
+        date: "June 12",
+        cost: 3118.97,
+        paid: 3118.97,
+        description: "",
       },
       {
-        item: "Material cost",
-        date: "june 20",
-        cost: 385.91,
-        paid: 385.91,
-        description: "home depot",
-      },
-
-      {
-        item: "Cleaning Agent",
-        date: "june 20",
-        cost: 73.09,
-        paid: 73.09,
-        description: "Canadian tire",
-      },
-
-      {
-        item: "Van rental",
-        date: "july 27",
-        cost: 155.88,
-        paid: 155.88,
-        description: "home depot",
-      },
-    ],
-  },
-  {
-    category: "Plumber",
-    details: [
-      {
-        item: "Bathromm new fixture",
-        date: "June 24",
-        cost: 3400,
-        paid: 2000,
-      },
-    ],
-  },
-  {
-    category: "Sign Guy",
-    details: [
-      {
-        items: "Front sign",
-        date: "jul 13",
-        cost: 7345,
-        paid: 7345,
+        item: "Materials from Home Depot",
+        date: "June 12",
+        cost: 384.32,
+        paid: 384.32,
         description: "",
       },
     ],
   },
-
-  {
-    category: "Appliances",
-    details: [
-      {
-        item: "Equipment Warmer",
-        date: "Jan 23",
-        cost: 2193.39,
-        paid: 2193.39,
-        description: "",
-      },
-    ],
-  },
-
-  // Add more categories as needed
 ];
 
-export default data;
+export default toronto;
