@@ -10,7 +10,7 @@ const MonthlyRecords = () => {
 
   return (
     <section className="w-full flex flex-col items-center justify-center bg-gradient-to-r from-green-400 to-green-800 text-black min-h-screen">
-      <div className="p-6 mx-auto shadow-lg rounded-lg w-full max-w-[800px]">
+      <div className="p-6 mx-auto shadow-lg rounded-lg w-full max-w-7xl">
         <h1 className="text-3xl font-bold mb-4 text-gray-900">
           Monthly Records
         </h1>
@@ -43,19 +43,33 @@ const RecordsTable = ({ records }) => {
 
   return (
     <div className="overflow-x-auto w-full">
-      <table className="w-full border-collapse border border-gray-300">
-        <thead className="bg-gray-100">
+      <table className="min-w-full border-collapse border border-gray-300">
+        <thead className="sticky top-0 bg-gray-100">
           <tr>
             <th className="border border-gray-300 p-3 text-left">Day</th>
-            <th className="border border-gray-300 p-3 text-left">
+            <th className="border border-gray-300 p-3 text-left">E-Transfer</th>
+            <th colSpan="3" className="border border-gray-300 p-3  text-center">
               Project Toronto
             </th>
-            <th className="border border-gray-300 p-3 text-left">
+            <th colSpan="3" className="border border-gray-300 p-3  text-center">
               Project Hamilton
             </th>
-            <th className="border border-gray-300 p-3 text-left">
+            <th colSpan="3" className="border border-gray-300 p-3  text-center">
               Miscellaneous
             </th>
+          </tr>
+          <tr>
+            <th className="border border-gray-300 p-3"></th>
+            <th className="border border-gray-300 p-3"></th>
+            <th className="border border-gray-300 p-3">Description</th>
+            <th className="border border-gray-300 p-3">Paid</th>
+            <th className="border border-gray-300 p-3">Remaining</th>
+            <th className="border border-gray-300 p-3">Description</th>
+            <th className="border border-gray-300 p-3">Paid</th>
+            <th className="border border-gray-300 p-3">Remaining</th>
+            <th className="border border-gray-300 p-3">Description</th>
+            <th className="border border-gray-300 p-3">Paid</th>
+            <th className="border border-gray-300 p-3">Remaining</th>
           </tr>
         </thead>
         <tbody>
@@ -65,20 +79,40 @@ const RecordsTable = ({ records }) => {
               className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}
             >
               <td className="border border-gray-300 p-3">{record.day}</td>
+              {/* Project Toronto */}
               <td className="border border-gray-300 p-3">
-                <div>Description: {record.project1.description || "N/A"}</div>
-                <div>Paid: ${record.project1.paid || "0"}</div>
-                <div>Remaining: ${record.project1.remaining || "0"}</div>
+                {record.etransfer || "N/A"}
               </td>
               <td className="border border-gray-300 p-3">
-                <div>Description: {record.project2.description || "N/A"}</div>
-                <div>Paid: ${record.project2.paid || "0"}</div>
-                <div>Remaining: ${record.project2.remaining || "0"}</div>
+                {record.toronto.description || "N/A"}
               </td>
               <td className="border border-gray-300 p-3">
-                <div>Description: {record.project3.description || "N/A"}</div>
-                <div>Paid: ${record.project3.paid || "0"}</div>
-                <div>Remaining: ${record.project3.remaining || "0"}</div>
+                ${record.toronto.paid || "0"}
+              </td>
+              <td className="border border-gray-300 p-3">
+                ${record.toronto.remaining || "0"}
+              </td>
+
+              {/* Project Hamilton */}
+              <td className="border border-gray-300 p-3">
+                {record.hamilton.description || "N/A"}
+              </td>
+              <td className="border border-gray-300 p-3">
+                ${record.hamilton.paid || "0"}
+              </td>
+              <td className="border border-gray-300 p-3">
+                ${record.hamilton.remaining || "0"}
+              </td>
+
+              {/* Miscellaneous */}
+              <td className="border border-gray-300 p-3">
+                {record.miscellaneous.description || "N/A"}
+              </td>
+              <td className="border border-gray-300 p-3">
+                ${record.miscellaneous.paid || "0"}
+              </td>
+              <td className="border border-gray-300 p-3">
+                ${record.miscellaneous.remaining || "0"}
               </td>
             </tr>
           ))}
