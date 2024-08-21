@@ -19,7 +19,7 @@ const App = () => {
       <ScrollToTop />
       <Routes>
         {!isAuthenticated ? (
-          <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
+          <Route path="/" element={<LoginPage onLogin={handleLogin} />} />
         ) : (
           <>
             <Route path="/" element={<Home />} />
