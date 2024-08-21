@@ -13,6 +13,11 @@ const DataTable = () => {
 
   const categoryData = data.find((item) => item.category === category);
 
+  const calculateDue = (cost, paid) => {
+    const due = parseFloat(cost) - parseFloat(paid);
+    return due < 0 ? 0 : due;
+  };
+
   return (
     <main className="w-full bg-gradient-to-r from-green-400 to-green-800 flex flex-col items-center">
       <Navbar />
@@ -37,7 +42,9 @@ const DataTable = () => {
                   <td className="py-2">{item.date}</td>
                   <td className="py-2">{item.cost}</td>
                   <td className="py-2">{item.paid}</td>
-                  <td className="py-2">{item.cost - item.paid}</td>
+                  <td className="py-2">
+                    {calculateDue(item.cost, item.paid)}
+                  </td>
                   <td className="py-2">{item.description}</td>
                 </tr>
               ))}
@@ -45,7 +52,6 @@ const DataTable = () => {
                 <td className="py-2">Total</td>
                 <td className="py-2">-</td>
                 <td className="py-2">
-                  {" "}
                   {categoryData.details.reduce(
                     (acc, item) => acc + parseFloat(item.cost),
                     0
@@ -58,14 +64,16 @@ const DataTable = () => {
                   )}
                 </td>
                 <td className="py-2">
-                  {categoryData.details.reduce(
-                    (acc, item) => acc + parseFloat(item.cost),
-                    0
-                  ) -
+                  {calculateDue(
+                    categoryData.details.reduce(
+                      (acc, item) => acc + parseFloat(item.cost),
+                      0
+                    ),
                     categoryData.details.reduce(
                       (acc, item) => acc + parseFloat(item.paid),
                       0
-                    )}
+                    )
+                  )}
                 </td>
                 <td className="py-2">-</td>
               </tr>
