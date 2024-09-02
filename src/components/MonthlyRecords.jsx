@@ -44,15 +44,24 @@ const RecordsTable = ({ records }) => {
       <table className="min-w-full text-sm text-left text-gray-500 bg-white border-separate border-spacing-0 border border-gray-300">
         <thead className="text-xs text-gray-700 uppercase bg-gray-100">
           <tr>
-            <th className="border border-gray-300 py-3 px-6">Day</th>
+            <th className="border border-gray-300 py-3 px-6">Date</th>
             <th className="border border-gray-300 py-3 px-6">E-Transfer</th>
-            <th colSpan="3" className="border border-gray-300 py-3 px-6 text-center">
+            <th
+              colSpan="3"
+              className="border border-gray-300 py-3 px-6 text-center"
+            >
               Project Toronto
             </th>
-            <th colSpan="3" className="border border-gray-300 py-3 px-6 text-center">
+            <th
+              colSpan="3"
+              className="border border-gray-300 py-3 px-6 text-center"
+            >
               Project Hamilton
             </th>
-            <th colSpan="3" className="border border-gray-300 py-3 px-6 text-center">
+            <th
+              colSpan="3"
+              className="border border-gray-300 py-3 px-6 text-center"
+            >
               Miscellaneous
             </th>
           </tr>

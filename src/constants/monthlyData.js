@@ -64,6 +64,13 @@ const monthlyData = {
       hamilton: { description: "", paid: 0, remaining: 0 },
       miscellaneous: { description: "", paid: 0, remaining: 0 },
     },
+    {
+      day: 13,
+      etransfer: "",
+      toronto: { description: "flooring fix", paid: 1500, remaining: 0 },
+      hamilton: { description: "", paid: 0, remaining: 0 },
+      miscellaneous: { description: "", paid: 0, remaining: 0 },
+    },
   ],
   July: [
     {
