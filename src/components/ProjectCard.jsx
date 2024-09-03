@@ -18,7 +18,7 @@ const ProjectCard = () => {
   };
 
   return (
-    <div className="relative max-w-[840px] max-md:max-w-[600px] max-sm:max-w-[340px] mx-auto">
+    <div className="relative  md:max-w-[768px] max-md:max-w-[290px] mx-auto">
       <div
         className="flex overflow-x-auto space-x-4 px-6 scroll-smooth custom-scrollbar"
         ref={scrollContainerRef}

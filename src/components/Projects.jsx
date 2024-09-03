@@ -2,7 +2,7 @@ import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   return (
-    <section className="w-full flex flex-col items-center justify-center bg-gradient-to-r from-green-400 to-green-800 text-white min-h-screen py-12">
+    <section className="w-full flex flex-col items-center justify-center bg-gradient-to-r from-green-400 to-green-800 text-white md:min-h-screen max-sm:h-fit py-12">
       <h1 className="text-4xl md:text-6xl font-bold mb-8">
         Our <span className="text-yellow-300">Projects</span>
       </h1>

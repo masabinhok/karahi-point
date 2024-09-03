@@ -23,7 +23,7 @@ const LoginPage = ({ onLogin }) => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-green-400 to-green-800">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-green-400 to-green-800 px-4">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <h1 className="text-3xl font-bold mb-6 text-gray-900">
           Karahi Point Login
