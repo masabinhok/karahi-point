@@ -51,7 +51,7 @@ const monthlyData = {
       miscellaneous: { description: "", paid: 0, remaining: 0 },
     },
     {
-      day: 11,
+      day: 12,
       etransfer: "0",
       toronto: { description: "taha", paid: 2500, remaining: 0 },
       hamilton: { description: "", paid: 0, remaining: 0 },
@@ -65,11 +65,11 @@ const monthlyData = {
       miscellaneous: { description: "", paid: 0, remaining: 0 },
     },
     {
-      day: 13,
-      etransfer: "",
-      toronto: { description: "flooring fix", paid: 1500, remaining: 0 },
-      hamilton: { description: "", paid: 0, remaining: 0 },
-      miscellaneous: { description: "", paid: 0, remaining: 0 },
+      day: 14,
+      etransfer: "10000",
+      toronto: { description: "", paid: 0, remaining: 0 },
+      hamilton: { description: "framing", paid: 3500, remaining: 0 },
+      miscellaneous: { description: "taiba month of aug", paid: 6700, remaining: 0 },
     },
   ],
   July: [
