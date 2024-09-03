@@ -29,7 +29,6 @@ const MonthlyRecords = () => {
     </section>
   );
 };
-
 const RecordsTable = ({ records }) => {
   if (!records || !Array.isArray(records)) {
     return (
@@ -39,9 +38,40 @@ const RecordsTable = ({ records }) => {
     );
   }
 
+  // Calculating totals for all projects and sections
+  const totalETransfer = records.reduce(
+    (acc, record) => acc + (Number(record.etransfer) || 0),
+    0
+  );
+  const totalTorontoPaid = records.reduce(
+    (acc, record) => acc + (record.toronto.paid || 0),
+    0
+  );
+  const totalTorontoRemaining = records.reduce(
+    (acc, record) => acc + (record.toronto.remaining || 0),
+    0
+  );
+  const totalHamiltonPaid = records.reduce(
+    (acc, record) => acc + (record.hamilton.paid || 0),
+    0
+  );
+  const totalHamiltonRemaining = records.reduce(
+    (acc, record) => acc + (record.hamilton.remaining || 0),
+    0
+  );
+  const totalMiscellaneousPaid = records.reduce(
+    (acc, record) => acc + (record.miscellaneous.paid || 0),
+    0
+  );
+  const totalMiscellaneousRemaining = records.reduce(
+    (acc, record) => acc + (record.miscellaneous.remaining || 0),
+    0
+  );
+
   return (
     <div className="overflow-x-auto shadow-md sm:rounded-lg">
       <table className="min-w-full text-sm text-left text-gray-500 bg-white border-separate border-spacing-0 border border-gray-300">
+        {/* Table header */}
         <thead className="text-xs text-gray-700 uppercase bg-gray-100">
           <tr>
             <th className="border border-gray-300 py-3 px-6">Date</th>
@@ -125,6 +155,37 @@ const RecordsTable = ({ records }) => {
               </td>
             </tr>
           ))}
+
+          {/* Total Row */}
+          <tr className="border-t bg-gray-100">
+            <td className="border border-gray-300 py-4 px-6 font-semibold">
+              Total
+            </td>
+            <td className="border border-gray-300 py-4 px-6 font-semibold">
+              ${totalETransfer}
+            </td>
+            <td className="border border-gray-300 py-4 px-6"></td>
+            <td className="border border-gray-300 py-4 px-6 font-semibold">
+              ${totalTorontoPaid}
+            </td>
+            <td className="border border-gray-300 py-4 px-6 font-semibold">
+              ${totalTorontoRemaining}
+            </td>
+            <td className="border border-gray-300 py-4 px-6"></td>
+            <td className="border border-gray-300 py-4 px-6 font-semibold">
+              ${totalHamiltonPaid}
+            </td>
+            <td className="border border-gray-300 py-4 px-6 font-semibold">
+              ${totalHamiltonRemaining}
+            </td>
+            <td className="border border-gray-300 py-4 px-6"></td>
+            <td className="border border-gray-300 py-4 px-6 font-semibold">
+              ${totalMiscellaneousPaid}
+            </td>
+            <td className="border border-gray-300 py-4 px-6 font-semibold">
+              ${totalMiscellaneousRemaining}
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
